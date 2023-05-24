@@ -3955,56 +3955,47 @@
             {
                 "ISOCountryGroups": {
                     "eea": ["preset-eea", "unknown"],
-                    "ccpa": ["preset-us-ca"]
+                    "ccpa": ["preset-us-ca", "us-va"]
                 }
             }
         </script>
     </amp-geo>
-    <amp-consent id="consent" layout="nodisplay" type="SourcePoint">
-        <script type="application/json">
-            {
-                "consentInstanceId": "sourcepoint",
-                "consentRequired": false,
-                "checkConsentHref": "https://sourcepoint.freestar.com/wrapper/tcfv2/v1/amp-v2",
-                "geoOverride": {
-                    "ccpa": {
-                        "consentRequired": "remote",
-                        "checkConsentHref": "https://sourcepoint.freestar.com/ccpa/consent/amp",
-                        "promptUISrc": "https://sourcepoint.freestar.com/amp/index.html?authId=CLIENT_ID",
-                        "postPromptUI": "ccpa-consent-ui",
-                        "clientConfig": {
-                            "accountId": 1638,
-                            "siteHref": "https://ccpa.amp.demo.freestar.com",
-                            "siteId": 24169,
-                            "isCCPA": true,
-                            "stageCampaign": false,
-                            "privacyManagerId": "6022b85a892e762cb08504d0",
-                            "getDnsMsgMms": true,
-                            "alwaysDisplayDns": false,
-                            "showNoticeUntilAction": true
-                        }
-                    },
-                    "eea": {
-                        "consentRequired": "remote",
-                        "checkConsentHref": "https://sourcepoint.freestar.com/wrapper/tcfv2/v1/amp-v2",
-                        "promptUISrc": "https://sourcepoint.freestar.com/amp/index.html?authId=CLIENT_ID",
-                        "postPromptUI": "eea-consent-ui",
-                        "clientConfig": {
-                            "accountId": 1638,
-                            "mmsDomain": "https://sourcepoint.freestar.com",
-                            "propertyHref": "https://amp.demo.freestar.com",
-                            "propertyId": 24168,
-                            "privacyManagerId": 426503,
-                            "isTCFV2": true,
-                            "pmTab": "purposes",
-                            "stageCampaign": false
-                        }
-                    }
-                }
-            }
-        </script>
-    </amp-consent>
 
+    <amp-consent id="consent" layout="nodisplay">
+      <script type="application/json">
+        {
+           "consentRequired": false,
+           "checkConsentHref": false,
+           "consentInstanceId": "sourcepoint",
+           "promptUISrc": "https://cdn.privacy-mgmt.com/amp/unified/index.html?authId=CLIENT_ID&source_url=SOURCE_URL",
+           "clientConfig": {
+              "accountId": 1638,
+              "propertyHref": "https://amp.demo.freestar.com",
+              "stageCampaign": false
+           },
+           "geoOverride": {
+              "eea": {
+                 "consentRequired": "remote",
+                 "checkConsentHref": "https://cdn.privacy-mgmt.com/wrapper/tcfv2/v1/amp-v2?authId=CLIENT_ID",
+                 "postPromptUI": "eea-consent-ui",
+                 "clientConfig": {
+                    "privacyManagerId": 426503,
+                    "pmTab": "purposes"
+                 }
+              },
+              "ccpa": {
+                 "consentRequired": "remote",
+                 "checkConsentHref": "https://cdn.privacy-mgmt.com/wrapper/ccpa/amp-v2?authId=CLIENT_ID",
+                 "postPromptUI": "ccpa-consent-ui",
+                 "clientConfig": {
+                    "isCCPA": true,
+                    "privacyManagerId": "6022b85a892e762cb08504d0"
+                 }
+              }
+           }
+        }
+      </script>
+    </amp-consent>
 
 
     <amp-analytics class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" i-amphtml-layout="fixed"

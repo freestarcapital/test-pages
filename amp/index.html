@@ -27,7 +27,56 @@
             -webkit-text-size-adjust: 100%;
             -moz-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
-            text-size-adjust: 100%
+            text-size-adjust: 100%;
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
         }
 
         html.i-amphtml-singledoc.i-amphtml-embedded {
@@ -35,17 +84,17 @@
             touch-action: pan-y pinch-zoom
         }
 
-        html.i-amphtml-fie>body,
-        html.i-amphtml-singledoc>body {
+        html.i-amphtml-fie > body,
+        html.i-amphtml-singledoc > body {
             overflow: visible !important
         }
 
-        html.i-amphtml-fie:not(.i-amphtml-inabox)>body,
-        html.i-amphtml-singledoc:not(.i-amphtml-inabox)>body {
+        html.i-amphtml-fie:not(.i-amphtml-inabox) > body,
+        html.i-amphtml-singledoc:not(.i-amphtml-inabox) > body {
             position: relative !important
         }
 
-        html.i-amphtml-ios-embed-legacy>body {
+        html.i-amphtml-ios-embed-legacy > body {
             overflow-x: hidden !important;
             overflow-y: auto !important;
             position: absolute !important
@@ -69,25 +118,25 @@
         }
 
         html.i-amphtml-ios-embed.i-amphtml-ios-overscroll,
-        html.i-amphtml-ios-embed.i-amphtml-ios-overscroll>#i-amphtml-wrapper {
+        html.i-amphtml-ios-embed.i-amphtml-ios-overscroll > #i-amphtml-wrapper {
             -webkit-overflow-scrolling: touch !important
         }
 
-        #i-amphtml-wrapper>body {
+        #i-amphtml-wrapper > body {
             position: relative !important;
             border-top: 1px solid transparent !important
         }
 
-        #i-amphtml-wrapper+body {
+        #i-amphtml-wrapper + body {
             visibility: visible
         }
 
-        #i-amphtml-wrapper+body .i-amphtml-lightbox-element,
-        #i-amphtml-wrapper+body[i-amphtml-lightbox] {
+        #i-amphtml-wrapper + body .i-amphtml-lightbox-element,
+        #i-amphtml-wrapper + body[i-amphtml-lightbox] {
             visibility: hidden
         }
 
-        #i-amphtml-wrapper+body[i-amphtml-lightbox] .i-amphtml-lightbox-element {
+        #i-amphtml-wrapper + body[i-amphtml-lightbox] .i-amphtml-lightbox-element {
             visibility: visible
         }
 
@@ -117,7 +166,7 @@
         }
 
         amp-experiment,
-        amp-live-list>[update] {
+        amp-live-list > [update] {
             display: none
         }
 
@@ -132,7 +181,7 @@
             padding: 5px
         }
 
-        amp-list[resizable-children]>.i-amphtml-loading-container.amp-hidden {
+        amp-list[resizable-children] > .i-amphtml-loading-container.amp-hidden {
             display: none !important
         }
 
@@ -168,7 +217,7 @@
             background-color: #757575
         }
 
-        amp-story .amp-active>div,
+        amp-story .amp-active > div,
         amp-story .i-amphtml-loader-background {
             display: none !important
         }
@@ -182,15 +231,15 @@
             display: inline-block !important
         }
 
-        amp-autocomplete>input,
-        amp-autocomplete>textarea {
+        amp-autocomplete > input,
+        amp-autocomplete > textarea {
             padding: 0.5rem;
             border: 1px solid rgba(0, 0, 0, 0.33)
         }
 
         .i-amphtml-autocomplete-results,
-        amp-autocomplete>input,
-        amp-autocomplete>textarea {
+        amp-autocomplete > input,
+        amp-autocomplete > textarea {
             font-size: 1rem;
             line-height: 1.5rem
         }
@@ -347,15 +396,15 @@
             visibility: visible !important
         }
 
-        .i-amphtml-screen-reader~.i-amphtml-screen-reader {
+        .i-amphtml-screen-reader ~ .i-amphtml-screen-reader {
             left: 8px !important
         }
 
-        .i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader {
+        .i-amphtml-screen-reader ~ .i-amphtml-screen-reader ~ .i-amphtml-screen-reader {
             left: 12px !important
         }
 
-        .i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader {
+        .i-amphtml-screen-reader ~ .i-amphtml-screen-reader ~ .i-amphtml-screen-reader ~ .i-amphtml-screen-reader {
             left: 16px !important
         }
 
@@ -379,14 +428,14 @@
             color: transparent !important
         }
 
-        .i-amphtml-notbuilt:not(.i-amphtml-layout-container)>*,
-        [layout]:not([layout=container]):not(.i-amphtml-element)>*,
-        [width][height][heights]:not([layout]):not(.i-amphtml-element)>*,
-        [width][height][sizes]:not([layout]):not(.i-amphtml-element)>* {
+        .i-amphtml-notbuilt:not(.i-amphtml-layout-container) > *,
+        [layout]:not([layout=container]):not(.i-amphtml-element) > *,
+        [width][height][heights]:not([layout]):not(.i-amphtml-element) > *,
+        [width][height][sizes]:not([layout]):not(.i-amphtml-element) > * {
             display: none
         }
 
-        amp-img:not(.i-amphtml-element)[i-amphtml-ssr]>img.i-amphtml-fill-content {
+        amp-img:not(.i-amphtml-element)[i-amphtml-ssr] > img.i-amphtml-fill-content {
             display: block
         }
 
@@ -402,27 +451,27 @@
             visibility: hidden !important
         }
 
-        .i-amphtml-element>[placeholder],
-        [layout]:not(.i-amphtml-element)>[placeholder],
-        [width][height][heights]:not([layout]):not(.i-amphtml-element)>[placeholder],
-        [width][height][sizes]:not([layout]):not(.i-amphtml-element)>[placeholder] {
+        .i-amphtml-element > [placeholder],
+        [layout]:not(.i-amphtml-element) > [placeholder],
+        [width][height][heights]:not([layout]):not(.i-amphtml-element) > [placeholder],
+        [width][height][sizes]:not([layout]):not(.i-amphtml-element) > [placeholder] {
             display: block;
             line-height: normal
         }
 
-        .i-amphtml-element>[placeholder].amp-hidden,
-        .i-amphtml-element>[placeholder].hidden {
+        .i-amphtml-element > [placeholder].amp-hidden,
+        .i-amphtml-element > [placeholder].hidden {
             visibility: hidden
         }
 
-        .i-amphtml-element:not(.amp-notsupported)>[fallback],
-        .i-amphtml-layout-container>[placeholder].amp-hidden,
-        .i-amphtml-layout-container>[placeholder].hidden {
+        .i-amphtml-element:not(.amp-notsupported) > [fallback],
+        .i-amphtml-layout-container > [placeholder].amp-hidden,
+        .i-amphtml-layout-container > [placeholder].hidden {
             display: none
         }
 
-        .i-amphtml-layout-size-defined>[fallback],
-        .i-amphtml-layout-size-defined>[placeholder] {
+        .i-amphtml-layout-size-defined > [fallback],
+        .i-amphtml-layout-size-defined > [placeholder] {
             position: absolute !important;
             top: 0 !important;
             left: 0 !important;
@@ -431,7 +480,7 @@
             z-index: 1
         }
 
-        .i-amphtml-notbuilt>[placeholder] {
+        .i-amphtml-notbuilt > [placeholder] {
             display: block !important
         }
 
@@ -471,7 +520,7 @@
             z-index: 1
         }
 
-        .i-amphtml-notbuilt>.i-amphtml-loading-container {
+        .i-amphtml-notbuilt > .i-amphtml-loading-container {
             display: block !important
         }
 
@@ -479,7 +528,7 @@
             visibility: hidden
         }
 
-        .i-amphtml-element>[overflow] {
+        .i-amphtml-element > [overflow] {
             cursor: pointer;
             position: relative;
             z-index: 2;
@@ -488,7 +537,7 @@
             line-height: normal
         }
 
-        .i-amphtml-element>[overflow].amp-visible {
+        .i-amphtml-element > [overflow].amp-visible {
             visibility: visible
         }
 
@@ -518,7 +567,7 @@
             visibility: hidden
         }
 
-        html.i-amphtml-fie>amp-analytics {
+        html.i-amphtml-fie > amp-analytics {
             position: initial !important
         }
 
@@ -533,11 +582,11 @@
             display: block !important
         }
 
-        amp-accordion>section {
+        amp-accordion > section {
             float: none !important
         }
 
-        amp-accordion>section>* {
+        amp-accordion > section > * {
             float: none !important;
             display: block !important;
             overflow: hidden !important;
@@ -545,15 +594,15 @@
         }
 
         amp-accordion,
-        amp-accordion>section {
+        amp-accordion > section {
             margin: 0
         }
 
-        amp-accordion:not(.i-amphtml-built)>section> :last-child {
+        amp-accordion:not(.i-amphtml-built) > section > :last-child {
             display: none !important
         }
 
-        amp-accordion:not(.i-amphtml-built)>section[expanded]> :last-child {
+        amp-accordion:not(.i-amphtml-built) > section[expanded] > :last-child {
             display: block !important
         }
 
@@ -576,6 +625,8 @@
     <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
     <script async custom-element="amp-geo" src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-video-docking" src="https://cdn.ampproject.org/v0/amp-video-docking-0.1.js"></script>
+    <script async custom-element="amp-video-iframe" src="https://cdn.ampproject.org/v0/amp-video-iframe-0.1.js"></script>
     <link href="/img/triple13logo.png" rel="icon" type="image/x-icon">
     <link as="image" data-hero href="img/t13-cover-banner.jpg" rel="preload">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3935,6 +3986,11 @@
             margin-left: 15px;
             margin-right: 15px;
         }
+
+        .amp-video-docked-dismiss {
+            transform: translate(13.5px, 110px);
+            pointer-events: all;
+        }
     </style>
     <link data-auto href="https://www.triple13.io/test-page.html" rel="canonical">
 </head>
@@ -3942,117 +3998,138 @@
 
 <body>
 
-    <amp-iframe layout="nodisplay" title="User Sync" data-block-on-consent width="1" height="1"
-        sandbox="allow-scripts allow-same-origin" frameborder="0"
-        src="https://static.s2s.t13.io/generic/load-cookie.html" class="sync-iframe">
-        <amp-img layout="fill" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-            placeholder></amp-img>
-    </amp-iframe>
+<amp-iframe layout="nodisplay" title="User Sync" data-block-on-consent width="1" height="1"
+            sandbox="allow-scripts allow-same-origin" frameborder="0"
+            src="https://static.s2s.t13.io/generic/load-cookie.html" class="sync-iframe">
+    <amp-img layout="fill" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+             placeholder></amp-img>
+</amp-iframe>
 
 
-    <amp-geo layout="nodisplay">
-        <script type="application/json">
-            {
-                "ISOCountryGroups": {
-                    "eea": ["preset-eea", "unknown"],
-                    "ccpa": ["preset-us-ca", "us-va"]
-                }
-            }
-        </script>
-    </amp-geo>
-
-    <amp-consent id="consent" layout="nodisplay">
-      <script type="application/json">
+<amp-geo layout="nodisplay">
+    <script type="application/json">
         {
-           "consentRequired": false,
-           "checkConsentHref": false,
-           "consentInstanceId": "sourcepoint",
-           "promptUISrc": "https://cdn.privacy-mgmt.com/amp/unified/index.html?authId=CLIENT_ID&source_url=SOURCE_URL",
-           "clientConfig": {
-              "accountId": 1638,
-              "propertyHref": "https://amp.demo.freestar.com",
-              "stageCampaign": false
-           },
-           "geoOverride": {
-              "eea": {
-                 "consentRequired": "remote",
-                 "checkConsentHref": "https://cdn.privacy-mgmt.com/wrapper/tcfv2/v1/amp-v2?authId=CLIENT_ID",
-                 "postPromptUI": "eea-consent-ui",
-                 "clientConfig": {
-                    "privacyManagerId": 426503,
-                    "pmTab": "purposes"
-                 }
-              },
-              "ccpa": {
-                 "consentRequired": "remote",
-                 "checkConsentHref": "https://cdn.privacy-mgmt.com/wrapper/ccpa/amp-v2?authId=CLIENT_ID",
-                 "postPromptUI": "ccpa-consent-ui",
-                 "clientConfig": {
-                    "isCCPA": true,
-                    "privacyManagerId": "6022b85a892e762cb08504d0"
-                 }
-              }
-           }
+            "ISOCountryGroups": {
+                "eea": [
+                    "preset-eea",
+                    "unknown"
+                ],
+                "ccpa": [
+                    "preset-us-ca",
+                    "us-va"
+                ]
+            }
         }
-      </script>
-    </amp-consent>
+    </script>
+</amp-geo>
 
-
-    <amp-analytics class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" i-amphtml-layout="fixed"
-        id="ga-analytics" style="width:1px;height:1px;" type="googleanalytics">
-        <script type="application/json">
-            {
-                "vars": {
-                    "account": "UA-165014582-1"
+<amp-consent id="consent" layout="nodisplay">
+    <script type="application/json">
+        {
+            "consentRequired": false,
+            "checkConsentHref": false,
+            "consentInstanceId": "sourcepoint",
+            "promptUISrc": "https://cdn.privacy-mgmt.com/amp/unified/index.html?authId=CLIENT_ID&source_url=SOURCE_URL",
+            "clientConfig": {
+                "accountId": 1638,
+                "propertyHref": "https://amp.demo.freestar.com",
+                "stageCampaign": false
+            },
+            "geoOverride": {
+                "eea": {
+                    "consentRequired": "remote",
+                    "checkConsentHref": "https://cdn.privacy-mgmt.com/wrapper/tcfv2/v1/amp-v2?authId=CLIENT_ID",
+                    "postPromptUI": "eea-consent-ui",
+                    "clientConfig": {
+                        "privacyManagerId": 426503,
+                        "pmTab": "purposes"
+                    }
                 },
-                "triggers": {
-                    "ga-view": {
-                        "on": "visible",
-                        "request": "pageview"
+                "ccpa": {
+                    "consentRequired": "remote",
+                    "checkConsentHref": "https://cdn.privacy-mgmt.com/wrapper/ccpa/amp-v2?authId=CLIENT_ID",
+                    "postPromptUI": "ccpa-consent-ui",
+                    "clientConfig": {
+                        "isCCPA": true,
+                        "privacyManagerId": "6022b85a892e762cb08504d0"
                     }
                 }
             }
-        </script>
-    </amp-analytics>
-
-    <main class="ta">
-
-
-        <section>
-            <div class="test-page-cover-banner"
-                style="height:64px; background-color:black; display:flex; align-items: center; padding-left:15px;">
-                <amp-img src="https://headphonereview.com/wp-content/uploads/2016/07/headphone-review-logo-wide.png"
-                    width="230px" height="31px"></amp-img>
-            </div>
-        </section>
+        }
+    </script>
+</amp-consent>
 
 
-        <section>
-            <h1 style="margin-bottom:0;">AMP Demo Page</h1>
-            <h3 style="margin-top:0;">Ads for your AMP pages</h2>
-                <amp-img
+<amp-analytics class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" i-amphtml-layout="fixed"
+               id="ga-analytics" style="width:1px;height:1px;" type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-165014582-1"
+            },
+            "triggers": {
+                "ga-view": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
+            }
+        }
+    </script>
+</amp-analytics>
+
+<main class="ta">
+
+
+    <section>
+        <div class="test-page-cover-banner"
+             style="height:64px; background-color:black; display:flex; align-items: center; padding-left:15px;">
+            <amp-img src="https://headphonereview.com/wp-content/uploads/2016/07/headphone-review-logo-wide.png"
+                     width="230px" height="31px"></amp-img>
+        </div>
+    </section>
+
+
+    <section>
+        <h1 style="margin-bottom:0;">AMP Demo Page</h1>
+        <h3 style="margin-top:0;">Ads for your AMP pages</h2>
+            <amp-img
                     src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-1.jpg"
                     width="505px" height="284px" layout="responsive" alt="top image"></amp-img>
-        </section>
+    </section>
 
 
-        <section>
-            <h2 class>Turtle Beach Stealth 700 Review</h2>
-            <h3 class>
-                AMP Ad 1: First in-content ad-unit. Should be straight after the first view-port
-            </h3>
+    <section>
+        <amp-video-iframe
+                src="https://live.primis-amp.tech/content/video/amp/videoIframe.php?s=116247&schain=1.0,1!triple13.io,79,1"
+                width="16"
+                height="9"
+                layout="responsive"
+                dock="#primis-dock-slot"
+        >
+        </amp-video-iframe>
+        <div style="right: 1px; position: fixed; top: 20px;">
+            <amp-layout
+                    width="213"
+                    height="120"
+                    id="primis-dock-slot">
+            </amp-layout>
+        </div>
+        <h2 class>Turtle Beach Stealth 700 Review</h2>
+        <h3 class>
+            AMP Ad 1: First in-content ad-unit. Should be straight after the first view-port
+        </h3>
 
-            <p class="margin">The Turtle Beach Stealth 700 has long been one of the most-loved gaming headsets out
-                there, thanks to its comfortable fit and solid sound quality. Now, however, the company is looking to
-                one-up itself — with the new Turtle Beach Stealth 700 Gen 2 gaming headset.</p>
-            <p class="margin">The new headset offers a similar design to the original, but it’s a whole lot more modern.
-                Plus, it has been updated to offer compatibility with next-gen consoles, like the Xbox Series X and
-                PlayStation 5. But at $150, are the Turtle Beach Stealth 700 headphones worth buying?</p>
-            <p class="margin">Note, we’re reviewing the PlayStation 4 model of the headset, but it’s also available in
-                an Xbox One model.</p>
+        <p class="margin">The Turtle Beach Stealth 700 has long been one of the most-loved gaming headsets out
+            there, thanks to its comfortable fit and solid sound quality. Now, however, the company is looking to
+            one-up itself — with the new Turtle Beach Stealth 700 Gen 2 gaming headset.</p>
+        <p class="margin">The new headset offers a similar design to the original, but it’s a whole lot more modern.
+            Plus, it has been updated to offer compatibility with next-gen consoles, like the Xbox Series X and
+            PlayStation 5. But at $150, are the Turtle Beach Stealth 700 headphones worth buying?</p>
+        <p class="margin">Note, we’re reviewing the PlayStation 4 model of the headset, but it’s also available in
+            an Xbox One model.</p>
 
-            <div class="ad">
-                <amp-ad data-block-on-consent width="336" height="280" layout="fixed" data-multi-size="300x250,250x250"
+        <div class="ad">
+            <amp-ad data-block-on-consent width="336" height="280" layout="fixed" data-multi-size="300x250,250x250"
                     data-multi-size-validation="false" type="doubleclick" data-slot="/15188745/FS-TestPage-AMP/AMP-1"
                     data-enable-refresh="30" data-lazy-fetch="true" data-loading-strategy="1.25" rtc-config='{
                        "vendors": {
@@ -4062,33 +4139,33 @@
                         }
                        }
                     }'>
-                </amp-ad>
-            </div>
-        </section>
+            </amp-ad>
+        </div>
+    </section>
 
 
-        <section>
-            <h2>Design</h2>
-            <h3 class>Flying Carpet: Second in-content ad-unit</h3>
-            <p class="margin">The first thing to notice about this headset is its design, and it looks great. The
-                headset is built largely from plastic, and while that does impact build quality a little, it also helps
-                keep them relatively light, which is always helpful. And, they still have a relatively strong metal
-                frame, which should keep them put together the majority of the time.</p>
-            <p class="margin">The left ear cup is where the action happens — you’ll get a volume wheel for your audio
-                and your microphone, along with a mode switch button, a power button, a Bluetooth pairing button, and a
-                USB-C port. It’s a big selection of controls and switches, and as a result it can take some time to get
-                used to the layout of everything. You will get used to it eventually, but again, it takes some time.</p>
-            <amp-img layout="responsive"
-                src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-3.jpg"
-                width="505px" height="284px"></amp-img>
-            <p class="margin">On the left ear cup, you’ll also get a retractable microphone. It’s nice that the
-                microphone is retractable, and you won’t really notice the microphone there when it is retracted.</p>
-            <p class="margin">In the box, apart from the headset itself, you’ll get a USB-C charging cable and a USB
-                dongle for non-Bluetooth wired use. It’s everything you’ll need, and you wouldn’t necessarily expect
-                anything else.</p>
-            <div>
-                <amp-fx-flying-carpet height="600px">
-                    <amp-ad data-block-on-consent width="300" height="600" layout="fixed" type="doubleclick"
+    <section>
+        <h2>Design</h2>
+        <h3 class>Flying Carpet: Second in-content ad-unit</h3>
+        <p class="margin">The first thing to notice about this headset is its design, and it looks great. The
+            headset is built largely from plastic, and while that does impact build quality a little, it also helps
+            keep them relatively light, which is always helpful. And, they still have a relatively strong metal
+            frame, which should keep them put together the majority of the time.</p>
+        <p class="margin">The left ear cup is where the action happens — you’ll get a volume wheel for your audio
+            and your microphone, along with a mode switch button, a power button, a Bluetooth pairing button, and a
+            USB-C port. It’s a big selection of controls and switches, and as a result it can take some time to get
+            used to the layout of everything. You will get used to it eventually, but again, it takes some time.</p>
+        <amp-img layout="responsive"
+                 src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-3.jpg"
+                 width="505px" height="284px"></amp-img>
+        <p class="margin">On the left ear cup, you’ll also get a retractable microphone. It’s nice that the
+            microphone is retractable, and you won’t really notice the microphone there when it is retracted.</p>
+        <p class="margin">In the box, apart from the headset itself, you’ll get a USB-C charging cable and a USB
+            dongle for non-Bluetooth wired use. It’s everything you’ll need, and you wouldn’t necessarily expect
+            anything else.</p>
+        <div>
+            <amp-fx-flying-carpet height="600px">
+                <amp-ad data-block-on-consent width="300" height="600" layout="fixed" type="doubleclick"
                         data-slot="/15188745/FS-TestPage-AMP/AMP-FlyingCarpet" data-lazy-fetch="true"
                         data-loading-strategy="1.25" rtc-config='{
                            "vendors": {
@@ -4098,29 +4175,29 @@
                             }
                            }
                         }'>
-                    </amp-ad>
-                </amp-fx-flying-carpet>
-            </div>
-        </section>
+                </amp-ad>
+            </amp-fx-flying-carpet>
+        </div>
+    </section>
 
 
-        <section>
-            <h2 class>Comfort</h2>
-            <h3 class>AMP Ad 2: Third in-content ad-unit</h3>
-            <p class="margin">The Turtle Beach Stealth 700 headphones offer tons of padding — and the result is that
-                they’re definitely comfortable enough to wear for long periods of time. We were able to wear the
-                headphones for hours at a time without any issues. The padding is also relatively cool, which is always
-                nice on those hot days.</p>
-            <amp-img layout="responsive"
-                src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-2.jpg"
-                width="505px" height="284px"></amp-img>
-            <p class="margin">That said, they’re not perfect. The headphones are pretty heavy, and they have a
-                pretty tight clamp — you’ll get used to it, but it may take a bit of time to do so. The headphones
-                do kind of need that clamp given their weight, but a slightly less tight clamp would have been nice.
-            </p>
+    <section>
+        <h2 class>Comfort</h2>
+        <h3 class>AMP Ad 2: Third in-content ad-unit</h3>
+        <p class="margin">The Turtle Beach Stealth 700 headphones offer tons of padding — and the result is that
+            they’re definitely comfortable enough to wear for long periods of time. We were able to wear the
+            headphones for hours at a time without any issues. The padding is also relatively cool, which is always
+            nice on those hot days.</p>
+        <amp-img layout="responsive"
+                 src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-2.jpg"
+                 width="505px" height="284px"></amp-img>
+        <p class="margin">That said, they’re not perfect. The headphones are pretty heavy, and they have a
+            pretty tight clamp — you’ll get used to it, but it may take a bit of time to do so. The headphones
+            do kind of need that clamp given their weight, but a slightly less tight clamp would have been nice.
+        </p>
 
-            <div class="ad">
-                <amp-ad data-block-on-consent width="336" height="280" layout="fixed" data-multi-size="300x250,250x250"
+        <div class="ad">
+            <amp-ad data-block-on-consent width="336" height="280" layout="fixed" data-multi-size="300x250,250x250"
                     data-multi-size-validation="false" type="doubleclick" data-slot="/15188745/FS-TestPage-AMP/AMP-2"
                     data-enable-refresh="30" data-lazy-fetch="true" data-loading-strategy="1.25" rtc-config='{
                        "vendors": {
@@ -4130,34 +4207,34 @@
                         }
                        }
                     }'>
-                </amp-ad>
-            </div>
-        </section>
+            </amp-ad>
+        </div>
+    </section>
 
 
-        <section>
-            <h2 class>Sound</h2>
-            <h3 class>AMP Ad 3: Forth in-content ad-unit for use in longer articles</h3>
-            <p class="margin">The Turtle Beach Stealth 700 has always offered a relatively good sound quality for the
-                money, and thankfully that remains true here. They offer a clear and detailed sound that helps make for
-                an immersive gaming experience.</p>
+    <section>
+        <h2 class>Sound</h2>
+        <h3 class>AMP Ad 3: Forth in-content ad-unit for use in longer articles</h3>
+        <p class="margin">The Turtle Beach Stealth 700 has always offered a relatively good sound quality for the
+            money, and thankfully that remains true here. They offer a clear and detailed sound that helps make for
+            an immersive gaming experience.</p>
 
-            <p class="margin">The bass response is pretty good here. Explosions offer a good amount of body, while kick
-                drums in music are relatively punchy. The bass could be a little rounder here, but it’s not bad by any
-                means, and you’ll still get a generally good experience.</p>
-            <amp-img layout="responsive"
-                src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-5.jpg"
-                width="505px" height="284px"></amp-img>
+        <p class="margin">The bass response is pretty good here. Explosions offer a good amount of body, while kick
+            drums in music are relatively punchy. The bass could be a little rounder here, but it’s not bad by any
+            means, and you’ll still get a generally good experience.</p>
+        <amp-img layout="responsive"
+                 src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-5.jpg"
+                 width="505px" height="284px"></amp-img>
 
-            <p class="margin">The mids on these headphones are very well-tuned. There’s a good amount of low mids on
-                offer, making for a warm sound, and the high mids are balanced enough to make for a good listening
-                experience. They do seem to be tucked away slightly, but that’s not a bad thing by any means.</p>
-            <p class="margin">The highs are excellent for a pair of headphones in this price range, even over Bluetooth.
-                Good high response makes for a clear and detailed sound that anyone will be able to appreciate.</p>
+        <p class="margin">The mids on these headphones are very well-tuned. There’s a good amount of low mids on
+            offer, making for a warm sound, and the high mids are balanced enough to make for a good listening
+            experience. They do seem to be tucked away slightly, but that’s not a bad thing by any means.</p>
+        <p class="margin">The highs are excellent for a pair of headphones in this price range, even over Bluetooth.
+            Good high response makes for a clear and detailed sound that anyone will be able to appreciate.</p>
 
 
-            <div class="ad">
-                <amp-ad data-block-on-consent width="336" height="280" layout="fixed" data-multi-size="300x250,250x250"
+        <div class="ad">
+            <amp-ad data-block-on-consent width="336" height="280" layout="fixed" data-multi-size="300x250,250x250"
                     data-multi-size-validation="false" type="doubleclick" data-slot="/15188745/FS-TestPage-AMP/AMP-3"
                     data-enable-refresh="30" data-lazy-fetch="true" data-loading-strategy="1.25" rtc-config='{
                        "vendors": {
@@ -4167,30 +4244,30 @@
                         }
                        }
                     }'>
-                </amp-ad>
-            </div>
-        </section>
+            </amp-ad>
+        </div>
+    </section>
 
 
-        <section>
-            <h2 class>Performance</h2>
-            <h3 class>AMP Ad 4: Fifth in-content ad-unit for use in longer articles</h3>
+    <section>
+        <h2 class>Performance</h2>
+        <h3 class>AMP Ad 4: Fifth in-content ad-unit for use in longer articles</h3>
 
-            <amp-img layout="responsive"
-                src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-4.jpg"
-                width="505px" height="284px"></amp-img>
-            <p class="margin">Perhaps one of the best things about this headset is how versatile it is. The Turtle Beach
-                Steal 700 has Bluetooth built in, plus it has a 5GHz connection through the included dongle. The result
-                is that you can use it with the majority of your devices — though the ability to use a wired connection
-                too would have been nice. We found that whether through Bluetooth or the 5GHz connection, the headset
-                retained a good connection.</p>
-            <p class="margin">The headset offers a battery life of up to 20 hours, which is pretty good — and means that
-                as long as you remember to charge every now and then, you shouldn’t run into issues around running out
-                of battery.</p>
+        <amp-img layout="responsive"
+                 src="https://headphonereview.com/wp-content/uploads/2020/10/turtle-beach-stealth-700-gen-2-4.jpg"
+                 width="505px" height="284px"></amp-img>
+        <p class="margin">Perhaps one of the best things about this headset is how versatile it is. The Turtle Beach
+            Steal 700 has Bluetooth built in, plus it has a 5GHz connection through the included dongle. The result
+            is that you can use it with the majority of your devices — though the ability to use a wired connection
+            too would have been nice. We found that whether through Bluetooth or the 5GHz connection, the headset
+            retained a good connection.</p>
+        <p class="margin">The headset offers a battery life of up to 20 hours, which is pretty good — and means that
+            as long as you remember to charge every now and then, you shouldn’t run into issues around running out
+            of battery.</p>
 
 
-            <div class="ad">
-                <amp-ad data-block-on-consent width="336" height="280" layout="fixed" data-multi-size="300x250,250x250"
+        <div class="ad">
+            <amp-ad data-block-on-consent width="336" height="280" layout="fixed" data-multi-size="300x250,250x250"
                     data-multi-size-validation="false" type="doubleclick" data-slot="/15188745/FS-TestPage-AMP/AMP-4"
                     data-enable-refresh="30" data-lazy-fetch="true" data-loading-strategy="1.25" rtc-config='{
                        "vendors": {
@@ -4200,25 +4277,25 @@
                         }
                        }
                     }'>
-                </amp-ad>
-            </div>
-        </section>
+            </amp-ad>
+        </div>
+    </section>
 
 
-        <section>
-            <h2 class>Conclusions</h2>
-            <h3 class>AMP Ad 5: Sixth in-content ad-unit and normally the last ad-unit on page after
-                all the content</h3>
+    <section>
+        <h2 class>Conclusions</h2>
+        <h3 class>AMP Ad 5: Sixth in-content ad-unit and normally the last ad-unit on page after
+            all the content</h3>
 
-            <p class="margin">The Turtle Beach Stealth 700 Gen 2 offers excellent value-for-money, thanks to its great
-                sound-quality and relatively comfortable experience.</p>
-            <p class="margin">But is it the best headset in the $150 price range? Well, it depends. If you want or need
-                Bluetooth connectivity, then it’s the way to go — but if you’re fine doing without, and happy to deal
-                with a dongle for wireless connectivity, then it’s worth considering the much-loved SteelSeries Arctis
-                7.</p>
+        <p class="margin">The Turtle Beach Stealth 700 Gen 2 offers excellent value-for-money, thanks to its great
+            sound-quality and relatively comfortable experience.</p>
+        <p class="margin">But is it the best headset in the $150 price range? Well, it depends. If you want or need
+            Bluetooth connectivity, then it’s the way to go — but if you’re fine doing without, and happy to deal
+            with a dongle for wireless connectivity, then it’s worth considering the much-loved SteelSeries Arctis
+            7.</p>
 
-            <div class="ad">
-                <amp-ad data-block-on-consent width="300" height="600" layout="fixed" data-multi-size="300x250,250x250"
+        <div class="ad">
+            <amp-ad data-block-on-consent width="300" height="600" layout="fixed" data-multi-size="300x250,250x250"
                     data-multi-size-validation="false" type="doubleclick" data-slot="/15188745/FS-TestPage-AMP/AMP-5"
                     data-enable-refresh="30" data-lazy-fetch="true" data-loading-strategy="1.25" rtc-config='{
                    "vendors": {
@@ -4228,17 +4305,17 @@
                         }
                        }
                     }'>
-                </amp-ad>
-            </div>
-        </section>
+            </amp-ad>
+        </div>
+    </section>
 
 
-        <section>
-            <h3 class>AMP-Sticky: Sticky footer ad-unit</h3>
+    <section>
+        <h3 class>AMP-Sticky: Sticky footer ad-unit</h3>
 
-            <amp-sticky-ad class="i-amphtml-layout-nodisplay" hidden="hidden" i-amphtml-layout="nodisplay"
-                layout="nodisplay">
-                <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-enable-refresh="30"
+        <amp-sticky-ad class="i-amphtml-layout-nodisplay" hidden="hidden" i-amphtml-layout="nodisplay"
+                       layout="nodisplay">
+            <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-enable-refresh="30"
                     data-multi-size="320x50,300x50" data-slot="/15188745/Triple13/Sticky" height="50"
                     i-amphtml-layout="fixed" rtc-config="{
                                 &quot;vendors&quot;: {
@@ -4251,66 +4328,66 @@
                                     &quot;https://api.floors.dev/sgw/v1/amp/floors?k=QBNaieBwWeBYMRGsreCNdCsuWLTtmZ&slot=/15188745/Triple13/Sticky&quot;
                                 ]
                             }" style="width:320px;height:50px;" type="doubleclick" width="320">
-                </amp-ad>
-            </amp-sticky-ad>
-        </section>
-    </main>
+            </amp-ad>
+        </amp-sticky-ad>
+    </section>
+</main>
 
 
-    <footer>
-        <footer class="border-top flex justify-center ampfooter">
-            <div class="max-width-4 flex col-12 ampfooter-first-div">
-                <div class="flex-column lg-col-6 self-center sm-col-12 dark-gray">
-                    <div class="ampfooter-copyright-text"><span>&copy; 2022&nbsp;</span><span
-                            class="ampfooter-span">Publisher First Inc. </span>
-                    </div>
-                    <div class="ampfooter-copyright-text"><span>All Rights Reserved</span></div>
+<footer>
+    <footer class="border-top flex justify-center ampfooter">
+        <div class="max-width-4 flex col-12 ampfooter-first-div">
+            <div class="flex-column lg-col-6 self-center sm-col-12 dark-gray">
+                <div class="ampfooter-copyright-text"><span>&copy; 2022&nbsp;</span><span
+                        class="ampfooter-span">Publisher First Inc. </span>
                 </div>
-                <div class="lg-col-2 sm-col-12 self-center">
-                    <ul class="ampfooter-icons">
-                        <li>
-                            <a aria-label="Link to AMP HTML LinkedIn" class="inline-block p1"
-                                href="https://www.linkedin.com/company/freestar/" rel="noreferrer" target="_blank">
-                                <svg fill="#454545" height="24" viewBox="0 0 24 24" width="24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a aria-label="Link to AMP HTML Twitter" class="inline-block p1"
-                                href="https://twitter.com/publisherfirst" rel="noreferrer" target="_blank">
-                                <svg fill="#454545" height="24" viewBox="0 0 53 49" width="24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <title>Twitter</title>
-                                    <path class="ampstart-icon ampstart-icon-twitter"
-                                        d="M45 6.9c-1.6 1-3.3 1.6-5.2 2-1.5-1.6-3.6-2.6-5.9-2.6-4.5 0-8.2 3.7-8.2 8.3 0 .6.1 1.3.2 1.9-6.8-.4-12.8-3.7-16.8-8.7C8.4 9 8 10.5 8 12c0 2.8 1.4 5.4 3.6 6.9-1.3-.1-2.6-.5-3.7-1.1v.1c0 4 2.8 7.4 6.6 8.1-.7.2-1.5.3-2.2.3-.5 0-1 0-1.5-.1 1 3.3 4 5.7 7.6 5.7-2.8 2.2-6.3 3.6-10.2 3.6-.6 0-1.3-.1-1.9-.1 3.6 2.3 7.9 3.7 12.5 3.7 15.1 0 23.3-12.6 23.3-23.6 0-.3 0-.7-.1-1 1.6-1.2 3-2.7 4.1-4.3-1.4.6-3 1.1-4.7 1.3 1.7-1 3-2.7 3.6-4.6" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="ampfooter-copyright-text"><span>All Rights Reserved</span></div>
+            </div>
+            <div class="lg-col-2 sm-col-12 self-center">
+                <ul class="ampfooter-icons">
+                    <li>
+                        <a aria-label="Link to AMP HTML LinkedIn" class="inline-block p1"
+                           href="https://www.linkedin.com/company/freestar/" rel="noreferrer" target="_blank">
+                            <svg fill="#454545" height="24" viewBox="0 0 24 24" width="24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Link to AMP HTML Twitter" class="inline-block p1"
+                           href="https://twitter.com/publisherfirst" rel="noreferrer" target="_blank">
+                            <svg fill="#454545" height="24" viewBox="0 0 53 49" width="24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <title>Twitter</title>
+                                <path class="ampstart-icon ampstart-icon-twitter"
+                                      d="M45 6.9c-1.6 1-3.3 1.6-5.2 2-1.5-1.6-3.6-2.6-5.9-2.6-4.5 0-8.2 3.7-8.2 8.3 0 .6.1 1.3.2 1.9-6.8-.4-12.8-3.7-16.8-8.7C8.4 9 8 10.5 8 12c0 2.8 1.4 5.4 3.6 6.9-1.3-.1-2.6-.5-3.7-1.1v.1c0 4 2.8 7.4 6.6 8.1-.7.2-1.5.3-2.2.3-.5 0-1 0-1.5-.1 1 3.3 4 5.7 7.6 5.7-2.8 2.2-6.3 3.6-10.2 3.6-.6 0-1.3-.1-1.9-.1 3.6 2.3 7.9 3.7 12.5 3.7 15.1 0 23.3-12.6 23.3-23.6 0-.3 0-.7-.1-1 1.6-1.2 3-2.7 4.1-4.3-1.4.6-3 1.1-4.7 1.3 1.7-1 3-2.7 3.6-4.6"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
 
+            </div>
+            <div class="lg-col-6 sm-col-12 flex flex-wrap self-center ampfooter-links dark-gray">
+                <div class="lg-col-6 sm-col-12 mt1 mb1 ampfooter-link">
+                    <a class="text-decoration-none ampfooter-anchor"
+                       href="https://freestar.com/privacy-policy/">Privacy
+                        policy</a>
                 </div>
-                <div class="lg-col-6 sm-col-12 flex flex-wrap self-center ampfooter-links dark-gray">
-                    <div class="lg-col-6 sm-col-12 mt1 mb1 ampfooter-link">
-                        <a class="text-decoration-none ampfooter-anchor"
-                            href="https://freestar.com/privacy-policy/">Privacy
-                            policy</a>
+                <div class="lg-col-6 sm-col-12 mt1 mb1 ampfooter-link">
+                    <div class="consent-ccpa text-decoration-none ampfooter-anchor" id="ccpa-consent-ui">
+                        <a on="tap:consent.prompt(consent=SourcePoint)">Do Not Sell My Info</a>
                     </div>
-                    <div class="lg-col-6 sm-col-12 mt1 mb1 ampfooter-link">
-                        <div class="consent-ccpa text-decoration-none ampfooter-anchor" id="ccpa-consent-ui">
-                            <a on="tap:consent.prompt(consent=SourcePoint)">Do Not Sell My Info</a>
-                        </div>
-                        <div class="consent-eea text-decoration-none ampfooter-anchor" id="eea-consent-ui">
-                            <a on="tap:consent.prompt(consent=SourcePoint)">Privacy Settings</a>
-                        </div>
+                    <div class="consent-eea text-decoration-none ampfooter-anchor" id="eea-consent-ui">
+                        <a on="tap:consent.prompt(consent=SourcePoint)">Privacy Settings</a>
                     </div>
                 </div>
             </div>
-        </footer>
-
+        </div>
     </footer>
+
+</footer>
 
 
 </body>
